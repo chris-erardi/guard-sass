@@ -114,6 +114,7 @@ module Guard
          rescue ::Sass::SyntaxError => e
            message = "Resolving partial owners of #{file} failed"
            @formatter.error "Sass > #{e.sass_backtrace_str(file)}", :notification => message
+	   next
          end
 
          # Find intersection with paths
